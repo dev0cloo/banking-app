@@ -19,19 +19,39 @@ const Hero = () => (
           Account
         </p>
       </div>
-      {/* controls the header of the hero section */}
+      {/* controls the header text of the hero section */}
       <div className="flex flex-row justify-between items-center w-full">
         <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
           The Next <br className="sm:block hidden" />
           <span className="text-gradient">GENERATION</span>{" "}
-          <br className="sm:block hidden" />
-          Payment Method.
         </h1>
+        {/* adds the Get started button */}
         <div className="ss:flex hidden md:mr-4 mr0">
           <GetStarted />
         </div>
       </div>
+      <h1 className="font-poppins font-semibold ss:text[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
+        Payment Method.
+      </h1>
+      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        Our team of experts uses a methodology to identify the credit cards most
+        likely to fit your needs. We examine annual percentage rates, annual
+        fees.
+      </p>
     </div>
+    {/* controls the image in hero section */}
+    <div className={`flex-1 flex flex-col ${styles.flexCenter} md:my-0 my-10 relative`}>
+      <img src={robot} alt="robot arm" className={`w-[100%] h-[100%] relative z-[5]`}/>
+      {/* controls gradient behind image */}
+      <div className="w-[40%] h-[35%] top-0 absolute z-[0] pink__gradient"/>
+      <div className="w-[80%] h-[80%] rounded-full bottom-40 absolute z-[1] white__gradient"/>
+      <div className="w-[50%] h-[50%] right-20 bottom-20 absolute z-[0] blue__gradient"/>
+      {/* puts a get started below the image in mobile view */}
+      <div className={`${styles.flexCenter} ss:hidden`}>
+        <GetStarted/>
+      </div>
+    </div>
+
   </section>
 );
 
