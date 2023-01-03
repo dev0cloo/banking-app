@@ -10,6 +10,7 @@ const Navbar = () => {
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
       {/* sets a navbar for desktops  */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
+        {/* maps links to texts in constants */}
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
