@@ -35,7 +35,7 @@ const Hero = () => (
          className="text-gradient">GENERATION</motion.span>{" "}
         </motion.h1>
         {/* adds the Get started button */}
-        <motion.div initial={{ opacity: 0, y: -100 }}
+        <motion.div initial="hidden"
           whileInView={{ opacity: [0,.5,1], y: [0,15,0],  transition:{
             duration: 1,
             times:[0,.5,1],
@@ -78,9 +78,14 @@ const Hero = () => (
       <div className="w-[80%] h-[80%] rounded-full bottom-40 absolute z-[1] white__gradient" />
       <div className="w-[50%] h-[50%] right-20 bottom-20 absolute z-[0] blue__gradient" />
       {/* puts a get started below the image in mobile view */}
-      <div className={`${styles.flexCenter} ss:hidden`}>
+      <motion.div initial="hidden"
+          whileInView={{ opacity: [0,.5,1], y: [0,15,0],  transition:{
+            duration: 1,
+            times:[0,.5,1],
+            delay: .5,
+          }} } variants={button} whileTap="click" className={`${styles.flexCenter} ss:hidden`}>
         <GetStarted />
-      </div>
+      </motion.div>
     </div>
   </section>
 );

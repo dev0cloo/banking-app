@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+// creates custom animations for each variant
 export const text = {
   visible: {
     opacity: 1,
@@ -43,6 +43,9 @@ export const normalText = {
 };
 
 export const button = {
+    hidden:{
+         opacity: 0, y: -100 
+    },
   hov: {
     scale: 1.1,
     ease: "easeInOut",
