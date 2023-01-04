@@ -1,7 +1,7 @@
 import React from "react";
 import { bill, apple, google } from "../assets";
-import { layout } from "../style";
-import styles from "../style";
+import { layout } from "../style"; //import the specific exported symbol 'layout' from the file '../style'
+import styles from "../style"; //import the default export as styles
 
 const Billing = () => (
   // section.Reverse lets the layout flip when on mobile

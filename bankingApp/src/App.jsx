@@ -32,9 +32,9 @@ const App = () => (
         <Business />
         <Billing />
         <CardDeal />
+        <Testimonials />
         <CTA />
         <Clients />
-        <Testimonials />
         <Footer />
       </div>
     </div>
