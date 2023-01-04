@@ -30,7 +30,7 @@ const Hero = () => (
           <GetStarted />
         </div>
       </div>
-      <h1 className="font-poppins font-semibold ss:text[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
+      <h1 className="font-poppins font-semibold ss:text[68px] text-[68px] text-white ss:leading-[100px] leading-[75px] w-full">
         Payment Method.
       </h1>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>

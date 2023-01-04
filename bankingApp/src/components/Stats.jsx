@@ -3,7 +3,7 @@ import styles from "../style";
 
 const Stats = () => (
   <section
-    className={`flex-wrap ${styles.flexCenter} flex-row sm:mb-20 mb-6 justify-between`}
+    className={`flex-wrap ${styles.flexCenter} flex-row sm:mt-20 mt-6 justify-center`}
   >
     {/* maps each id to a value and a title */}
     {stats.map((stat) => (
