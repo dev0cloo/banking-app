@@ -31,8 +31,8 @@ const App = () => (
         <Stats />
         <Business />
         <Billing />
-        <CTA />
         <CardDeal />
+        <CTA />
         <Clients />
         <Testimonials />
         <Footer />

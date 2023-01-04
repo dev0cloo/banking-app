@@ -4,6 +4,8 @@ import { layout } from "../style";
 import styles from "../style";
 
 const Billing = () => (
+  // section.Reverse lets the layout flip when on mobile
+  // i.e text shows before the image
   <section id="product" className={`${layout.sectionReverse} gap-6`}>
     <div className={`${layout.sectionImgReverse}`}>
       <img
