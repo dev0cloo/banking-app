@@ -12,7 +12,7 @@ const Testimonials = () => (
     <div className={`absolute z-[0] w-[60%] -right-[50%] h-[50%] rounded-full blue__gradient`} />
 
     <div
-      className={`w-full flex sm:flex-row flex-col sm:mb-16 justify-between items-center relative z-[1] mb-6`}
+      className={`w-full flex md:flex-row flex-col sm:mb-16 justify-between items-center relative z-[1] mb-6`}
     >
       <h2 className={styles.heading2}>
         What people are
