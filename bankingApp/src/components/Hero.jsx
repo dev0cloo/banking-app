@@ -2,6 +2,11 @@ import React from "react";
 import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
+import { motion } from "framer-motion";
+import { text, textChild, normalText, button} from "./Variants";
+// make animation smoother for header in hero section
+
+
 
 const Hero = () => (
   <section id="home" className={"flex md:flex-row flex-col ${styles.paddingY}"}>
@@ -9,7 +14,8 @@ const Hero = () => (
       className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
     >
       {/* controls the discount aspect of the hero */}
-      <div
+      <motion.div initial="hidden" variants={normalText}
+          whileInView="visible"
         className={`flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2`}
       >
         <img src={discount} alt="discount" className={`w-[32px] h-[32px]`} />
@@ -18,26 +24,45 @@ const Hero = () => (
           Discount For <span className="text-white">1 Month </span>
           Account
         </p>
-      </div>
+      </motion.div>
       {/* controls the header text of the hero section */}
       <div className="flex flex-row justify-between items-center w-full">
-        <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
+        <motion.h1 initial="hidden"
+            whileInView= "visible" variants={text}
+        className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
           The Next <br className="sm:block hidden" />
-          <span className="text-gradient">GENERATION</span>{" "}
-        </h1>
+          <motion.span variants={textChild}
+         className="text-gradient">GENERATION</motion.span>{" "}
+        </motion.h1>
         {/* adds the Get started button */}
-        <div className="ss:flex hidden md:mr-4 mr0">
+        <motion.div initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: [0,.5,1], y: [0,15,0],  transition:{
+            duration: 1,
+            times:[0,.5,1],
+            delay: 2,
+          }} }
+          whileHover="hov" variants={button}
+          whileTap="click"
+         className="ss:flex hidden md:mr-4 mr 0">
           <GetStarted />
-        </div>
+        </motion.div>
       </div>
-      <h1 className="font-poppins font-semibold ss:text[68px] text-[68px] text-white ss:leading-[100px] leading-[75px] w-full">
+      <motion.h1 initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1,
+            delay: 1.2,
+          }} className="font-poppins font-semibold ss:text[68px] text-[68px] text-white ss:leading-[100px] leading-[75px] w-full">
         Payment Method.
-      </h1>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+      </motion.h1>
+      <motion.p initial="hidden"
+          whileInView="visible"
+          variants={normalText}
+        className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Our team of experts uses a methodology to identify the credit cards most
         likely to fit your needs. We examine annual percentage rates, annual
         fees.
-      </p>
+      </motion.p>
     </div>
     {/* controls the image in hero section */}
     <div
