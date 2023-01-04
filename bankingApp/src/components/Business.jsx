@@ -34,7 +34,7 @@ const Business = () => {
       {/* controls the left side of the business component */}
       <div className={layout.sectionInfo}>
         <h2 className={`${styles.heading2} mt-5`}>
-          You do the business <br className="sm:block hidden" /> We'll handle
+          You do the business, <br className="sm:block hidden" /> We'll handle
           the money.
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
