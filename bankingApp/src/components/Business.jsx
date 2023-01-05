@@ -47,7 +47,7 @@ const Business = () => {
         <Button styles="mt-10" />
       </div>
       {/* controls the right side of the business component */}
-      <div className={`${layout.sectionImg} flex-col`}>
+      <div className={`${layout.sectionImg} flex-col justify-center`}>
         {/* maps each feature  */}
         {features.map((feature, index) => (
           <FeatureCard key={feature.id} {...feature} index={index} />
