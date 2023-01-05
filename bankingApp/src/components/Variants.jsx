@@ -1,5 +1,6 @@
 // creates custom animations for each variant
-import { motion } from "framer-motion";
+// clean up codebase
+import { delay, motion } from "framer-motion";
 import { animate } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -99,6 +100,8 @@ export const card={
         opacity: 1,
         x: 0,
         transition: { duration: 1, ease: "easeInOut" }
+    },
+    image:{
+        opacity:1, scale:1, transition:{duration: 1, delay:.5}
     }
-
 }
