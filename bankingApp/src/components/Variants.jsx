@@ -68,9 +68,13 @@ export const normalText = {
     x: 0,
     transition: { duration: 1, ease: "easeInOut" }
   },
+  para1:{
+    opacity: 0,
+    scale: .5,
+  },
   para:{
     opacity: 1,
-    x: 0,
+    scale: 1,
     transition: { delay:.5, duration: 1, ease: "easeInOut" }
   }
 };
