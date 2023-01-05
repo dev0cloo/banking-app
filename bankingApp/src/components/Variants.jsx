@@ -1,11 +1,32 @@
-import { motion } from "framer-motion";
 // creates custom animations for each variant
+import { motion } from "framer-motion";
+import { animate } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+function Counter({ from, to, textBefore, textAfter }) {
+  const ref = useRef();
+
+  useEffect(() => {
+    const controls = animate(from, to, {
+      duration: 4,
+      onUpdate(value) {
+        ref.current.textContent =textBefore + value.toFixed(0) + textAfter;
+      }
+    });
+    return () => controls.stop();
+  }, [from, to]);
+
+  return <p ref={ref} />;
+}
+
+export default Counter;
+
 export const text = {
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 0,
+      
       when: "beforeChildren",
       staggerChildren: 0.2,
       duration: 0.8,
@@ -49,7 +70,7 @@ export const button = {
   hov: {
     scale: 1.1,
     ease: "easeInOut",
-    transition: { duration: 0.3 ,stiffiness:100, dampening: 10},
+    transition: { duration: 0.3 , dampening: 10},
   },
   click: {
     scale: 0.9,

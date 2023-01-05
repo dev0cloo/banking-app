@@ -40,6 +40,7 @@ const Hero = () => (
             duration: 1,
             times:[0,.5,1],
             delay: 2,
+            
           }} }
           whileHover="hov" variants={button}
           whileTap="click"
