@@ -8,7 +8,7 @@ function Counter({ from, to, textBefore, textAfter }) {
 
   useEffect(() => {
     const controls = animate(from, to, {
-      duration: 4,
+      duration: 3.3,
       onUpdate(value) {
         ref.current.textContent =textBefore + value.toFixed(0) + textAfter;
       }
@@ -61,6 +61,17 @@ export const normalText = {
     opacity: 0,
     x: -100,
   },
+
+  header:{
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: "easeInOut" }
+  },
+  para:{
+    opacity: 1,
+    x: 0,
+    transition: { delay:.5, duration: 1, ease: "easeInOut" }
+  }
 };
 
 export const button = {
@@ -78,3 +89,16 @@ export const button = {
     ease: "easeInOut",
   },
 };
+
+export const card={
+    hidden:{
+        opacity: 0, x: 100 
+    },
+    
+    visible:{
+        opacity: 1,
+        x: 0,
+        transition: { duration: 1, ease: "easeInOut" }
+    }
+
+}
