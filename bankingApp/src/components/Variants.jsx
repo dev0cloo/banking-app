@@ -1,6 +1,6 @@
 // creates custom animations for each variant
 // clean up codebase
-import { delay, motion } from "framer-motion";
+import { delay, motion, useTransform } from "framer-motion";
 import { animate } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -105,3 +105,11 @@ export const card={
         opacity:1, scale:1, transition:{duration: 1, delay:.5}
     }
 }
+
+// export const background = {useTransform([ "background: radial-gradient( 64.18% 64.18% at 71.16% 35.69%, #def9fa 0.89%, #bef3f5 17.23%,#9dedf0 42.04%,#7de7eb 55.12%,#5ce1e6 71.54%,#33bbcf 100%)"]
+// )
+//     return(
+//     <motion.h2 style={{background}}>What people are
+//     <br className="sm:block hidden" /> saying about us</motion.h2>
+// )}
+    
