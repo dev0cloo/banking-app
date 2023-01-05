@@ -43,7 +43,7 @@ const Billing = () => (
         }}
         className={`${styles.heading2} `}
       >
-        Easily control your <br className="sm:block hidden" />
+        Easily <span className="text-gradient">control</span> your <br className="sm:block hidden" />
         billing & invoicing.
       </motion.h2>
       <motion.p

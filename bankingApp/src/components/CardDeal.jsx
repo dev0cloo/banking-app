@@ -14,7 +14,7 @@ const CardDeal = () => (
         whileInView="header"
         className={`${styles.heading2} mt-5`}
       >
-        Find a better card deal <br className="sm:block hidden" /> in few easy
+        Find a <span className="text-gradient">better</span> card deal <br className="sm:block hidden" /> in few easy
         steps.
       </motion.h2>
       <motion.p

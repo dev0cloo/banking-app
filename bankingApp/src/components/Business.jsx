@@ -46,7 +46,7 @@ const Business = () => {
           whileInView="header"
           className={`${styles.heading2} mt-5`}
         >
-          You do the business, <br className="sm:block hidden" /> We'll handle
+          You do the <span className="text-gradient">business,</span> <br className="sm:block hidden" /> We'll handle
           the money.
         </motion.h2>
         <motion.p
